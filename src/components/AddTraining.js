@@ -32,10 +32,9 @@ const addTraining = () => {
 		
 	};
 
-
 return(
     <div>
-<Button variant="outlined" color="primary" onClick={handleClickOpen}>
+      <Button variant="outlined" color="primary" onClick={handleClickOpen}>
         Add Training
       </Button>
       <Dialog open={open} onClose={handleClose} aria-labelledby="form-dialog-title">

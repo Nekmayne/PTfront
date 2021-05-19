@@ -10,12 +10,12 @@ function App() {
   return (
     <div className="App">
         <AppBar position="static">
-        <Toolbar>
-          <Typography variant="h6">
-            PersonalTrainer
-          </Typography>
-        </Toolbar>
-      </AppBar>
+          <Toolbar>
+            <Typography variant="h6">
+              PersonalTrainer
+            </Typography>
+          </Toolbar>
+        </AppBar>
       <TabApp />
     </div>
   );

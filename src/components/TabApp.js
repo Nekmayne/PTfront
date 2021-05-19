@@ -9,7 +9,7 @@ import Calendar from './Calendar';
 
 function TabApp() {
 
-const [value, setValue] = useState('one');
+const [value, setValue] = useState('customer');
 
 const handleChange = (event, value) => {
     setValue(value);
@@ -19,15 +19,15 @@ const handleChange = (event, value) => {
         <div>
      <AppBar position="static">
         <Tabs value={value} onChange={handleChange}>
-          <Tab value="one" label="Customers" />
-          <Tab value="two" label="Trainings" />
-          <Tab value="three" label="Calendar" />
+          <Tab value="customer" label="Customers" />
+          <Tab value="training" label="Trainings" />
+          <Tab value="calendar" label="Calendar" />
           
         </Tabs>
       </AppBar>
-      {value === 'one' && <div><Customerlist/></div>}
-      {value === 'two' && <div><Trainings/></div>}
-      {value === 'three' && <div><Calendar/></div>}
+      {value === 'customer' && <div><Customerlist/></div>}
+      {value === 'training' && <div><Trainings/></div>}
+      {value === 'calendar' && <div><Calendar/></div>}
       
         </div>
     );

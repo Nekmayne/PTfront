@@ -10,12 +10,12 @@ function BigCalendar() {
     
     useEffect(() => {
     getTrainings();
-}, []);
+    }, []);
 
-const getTrainings = () => {
-    fetch('https://customerrest.herokuapp.com/gettrainings', {
-            method: 'GET'
-        })
+    const getTrainings = () => {
+      fetch('https://customerrest.herokuapp.com/gettrainings', {
+        method: 'GET'
+      })
         .then(response => response.json())
         .then(data => setTrainings(data))
         .catch(err => console.error(err))
@@ -25,21 +25,21 @@ return(
     <div>
         <h1>Calendar</h1>
         <Calendar
-    localizer={localizer}
-    events={trainings}
-    titleAccessor={(event) => {
-        return event.activity + " - " + event.customer.firstname;
-      }}
-      startAccessor={(event) => {
-        return moment(event.date).toDate();
-      }}
-      endAccessor={(event) => {
-        return moment(event.date).add(event.duration, "minutes").toDate();
-      }}
-      style={{ height: 500 }}
-  />
+          localizer={localizer}
+          events={trainings}
+          titleAccessor={(event) => {
+            return event.activity + " - " + event.customer.firstname;
+          }}
+          startAccessor={(event) => {
+            return moment(event.date).toDate();
+          }}
+          endAccessor={(event) => {
+            return moment(event.date).add(event.duration, "minutes").toDate();
+          }}
+          style={{ height: 600 }}
+          />
     </div>
 )
-
 }
+
 export default BigCalendar;
