@@ -5,7 +5,7 @@ import Tab from '@material-ui/core/Tab';
 import Customerlist from './Customerlist'
 import Trainings from './Trainings';
 import Calendar from './Calendar';
-import BarChart from './BarChart';
+
 
 function TabApp() {
 
@@ -22,13 +22,13 @@ const handleChange = (event, value) => {
           <Tab value="one" label="Customers" />
           <Tab value="two" label="Trainings" />
           <Tab value="three" label="Calendar" />
-          <Tab value="four" label="Chart" />
+          
         </Tabs>
       </AppBar>
       {value === 'one' && <div><Customerlist/></div>}
       {value === 'two' && <div><Trainings/></div>}
       {value === 'three' && <div><Calendar/></div>}
-      {value === 'four' && <div><BarChart/></div>}
+      
         </div>
     );
 };
